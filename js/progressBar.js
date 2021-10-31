@@ -1,44 +1,33 @@
 //ProgressBar
 
-function move (iteration, lengthArr) {       
-    
+function move(iteration, lengthArr = 0) {       
+    const stop = iteration * 100 / lengthArr;
+    const elem = document.getElementById("Bar");
+    let width = lengthArr ? (iteration - 1) * 100 / lengthArr : 0;
 
-    var stop = iteration * 100 / lengthArr,
-        elem = document.getElementById("Bar"),
-        width = (iteration - 1) * 100 / lengthArr;
-
-    if (lengthArr != undefined) {
-
-        if (iteration == 0) {
-            var sett = 0;
-        } else { 
-            var sett = 12; 
-        };
-
-        var id = setInterval ( frame, sett );
-
+    if (!!lengthArr) {
+        let sett = 0
+        if (iteration != 0) {
+            sett = 12; 
+        }
+        const id = setInterval(frame, sett);
         function frame() {
-          
            if (width >= stop) {
                clearInterval(id);
            } else {
                width ++; 
                elem.style.width = width + '%'; 
            }
-        };
-    } else { 
-     // console.log(width);
-           var id = setInterval ( back, 120);
-           function back () {
-               if (width > stop) {
-                 width --; 
-                   elem.style.width = width + '%'; 
-
-               } else {
-                  clearInterval(id); 
-               }
-           };
-     
-    }
-    
+        }
+    } else {
+        const id = setInterval(back, 120);
+        function back() {
+            if (width > stop) {
+                width--;
+                elem.style.width = width + '%';
+            } else {
+                clearInterval(id);
+            }
+        }
+    }   
 }
