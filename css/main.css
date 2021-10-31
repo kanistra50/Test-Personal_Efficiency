@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400');
+
+body {
+    position: static;
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    text-align: center;
+    background-image: url("../img/test_bg.jpg");
+    background-size: 150%;
+}
+
+.container {
+    position: relative;
+    top: 30px;
+}
+
+.button {
+  background-color: #0077b3;
+  color: white;
+  margin: 1px;  
+  width: 160px;
+  height: 34px;
+  font-size: 11pt;
+  box-shadow: none;
+  border-radius: 5px;
+  border-width: 1.0px;
+  border-color: #0077b3; 
+}
+
+.big {
+    width: 160px;  
+}
+
+.control {    
+    width: 80px;    
+}
+
+.button:hover {
+ 
+  border-width: 1.0px;
+  border-color: #00334d;
+  cursor: pointer;
+  border-top-color:  #006699;
+  border-right-color:  #006699;
+  border-left-color:   #006699;
+  border-bottom-color:   #006699;
+}
+
+.head {
+  font-size: 30pt;
+  color: #ffffe6;
+}
+
+#message {  
+    font-size: 20pt;
+}
+
+
+#Progress {
+  position: relative;
+  width: 30%;
+  height: 4px;
+  background-color: #ffffe6;
+  border-radius: 2px;
+  margin: auto;
+}
+
+#Bar {
+  width: 1%;
+  position: absolute;
+  height: 100%;
+  background-color: lawngreen;
+  border-radius: 2px;
+}
+
